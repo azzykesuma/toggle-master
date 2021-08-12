@@ -1,0 +1,239 @@
+* {
+    padding : 0;
+    margin : 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat',sans-serif;
+    background-color: hsl(240, 78%, 98%);
+}
+
+.mainContainer {
+    position: relative;
+}
+
+.topPattern {
+    position: absolute;
+    height : 30em;
+    width : 20em;
+    top : -5em;
+    left : 15em;
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block: 80px;
+}
+
+header > h1 {
+    color : hsl(233, 13%, 49%);
+}
+
+.toggleContainer {
+    display: flex;
+    margin-top: 50px;
+    gap: 25px;
+}
+
+.toggleContainer > p {
+    color : hsl(234, 14%, 74%);
+    font-size: 15px;
+}
+
+.toggleLabel {
+    position: relative;
+    display: inline-block;
+    bottom : 3px;
+    width: 54px;
+    height : 26px;
+}
+
+.toggleLabel input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggleCheck {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 40px;
+}
+
+.toggleCheck:before {
+    position: absolute;
+    content: "";
+    height : 20px;
+    width: 20px;
+    top : 3px;
+    left: 30px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggleCheck {
+    background-color: #2196F3;
+}
+
+input:focus + .toggleCheck {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .toggleCheck:before {
+    -webkit-transform: translateX(-26px);
+    -ms-transform: translateX(-26px);
+    transform: translateX(-26px);
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background-color: #fff;
+    margin-bottom: 30px;
+    padding : 20px;
+    margin-inline : 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.card > p {
+    font-size: 16px;
+    color : hsl(233, 13%, 49%);
+}
+
+h2 {
+    font-size: 60px;
+    margin-bottom: 30px;
+    color : hsl(232, 13%, 33%);
+}
+
+.benefitTop {
+    border-top : 1px solid hsl(233, 13%, 49%);
+    border-bottom : 1px solid hsl(233, 13%, 49%);
+    width : 100%;
+    text-align: center;
+    padding-block : 20px;
+}
+
+.benefit {
+    border-bottom : 1px solid hsl(233, 13%, 49%);
+    width : 100%;
+    text-align: center;
+    padding-block : 20px;
+}
+
+button {
+    margin-top: 30px;
+    width: 100%;
+    border : none;
+    background: linear-gradient(to right, hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    padding : 10px;
+    border-radius: 5px;
+    color : #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'Montserrat',sans-serif;
+    transition: 0.5s ease-in-out;
+}
+
+button:hover {
+    background-image: none;
+    cursor: pointer;
+    color : lightskyblue;
+    border : 1px solid hsl(233, 13%, 49%);
+}
+
+/* middle card */
+
+.card:nth-child(2) {
+    background-image : linear-gradient(to right, hsl(236, 72%, 79%),hsl(237, 63%, 64%))
+}
+
+.card:nth-child(2) > h2 {
+    color : #fff;
+}
+
+.card:nth-child(2) > p {
+    color : #fff;
+}
+
+.card:nth-child(2) > .benefitTop {
+    border-top : 1px solid hsl(240, 78%, 98%);
+    border-bottom : 1px solid hsl(240, 78%, 98%);
+}
+
+.card:nth-child(2) > .benefit {
+    border-bottom : 1px solid hsl(240, 78%, 98%);
+}
+
+.card:nth-child(2) > button {
+    background: #fff;
+    color : lightskyblue;
+    border : none;
+}
+
+.card:nth-child(2) > button:hover {
+    background: none;
+    color : #fff;
+    border : 1px solid #fff;
+}
+
+.bottomPattern {
+    display: none;
+}
+
+@media screen and (min-width : 1200px) {
+    .topPattern {
+        left : 60em;
+    }
+    
+    .cardContainer {
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 90px;
+    }
+
+    .card {
+        margin-inline : 0;
+        width : 350px;
+        height : 445px;
+        box-shadow: 0px 26px 58px -12px rgba(0,0,0,0.75);
+    }
+
+    .card:nth-child(2) {
+        height : 490px;
+        margin-top: -2em;
+    }
+
+    .card:nth-child(2) > button {
+        margin-top: 4em;
+    }
+
+    .bottomPattern {
+        display: block;
+        position: absolute;
+        bottom : -5em;
+        left : 0;
+        z-index: -1;
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+</head>
+<body>
+  <div class="mainContainer">
+    <img src="./images/bg-top.svg" alt="bg-top" class="topPattern">
+    <!-- header and toggle section -->
+    <header>
+      <h1>Our Pricing</h1>
+      <div class="toggleContainer">
+        <p>Annually</p>
+        <label for="toggle" class="toggleLabel">
+          <input type="checkbox" id="toggle" />
+          <div class="toggleCheck"></div>
+        </label>
+        <p>Monthly</p>
+      </div>
+    </header>
+
+    <!-- card section -->
+    <section>
+      <div class="cardContainer">
+
+        <div class="card">
+          <p>Basic</p>
+          <h2 id='price_basic'>&dollar;19.99</h2>
+          <p class="benefitTop">500 GB Storage</p>
+          <p class="benefit">2 Users Allowed</p>
+          <p class="benefit">Send up to 3 GB</p>
+          <button>Learn More</button>
+        </div>
+
+        <div class="card">
+          <p>Professional</p>
+          <h2 id="price_professional">&dollar;24.99</h2>
+          <p class="benefitTop">1 TB Storage</p>
+          <p class="benefit">5 Users Allowed</p>
+          <p class="benefit">Send up to 10 GB</p>
+          <button>Learn More</button>
+        </div>
+
+        <div class="card">
+          <p>Master</p>
+          <h2 id="price_master">&dollar;39.99</h2>
+          <p class="benefitTop">2 TB Storage</p>
+          <p class="benefit">10 Users Allowed</p>
+          <p class="benefit">Send up to 20 GB</p>
+          <button>Learn More</button>
+        </div>
+      </div>
+    </section>
+    <img src="./images/bg-bottom.svg" alt="bg-bottom" class="bottomPattern">
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
